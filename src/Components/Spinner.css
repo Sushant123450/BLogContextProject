@@ -1,0 +1,98 @@
+.spinner {
+    position: relative;
+    width: 33.6px;
+    height: 33.6px;
+    perspective: 67.2px;
+}
+
+.spinner div {
+    width: 100%;
+    height: 100%;
+    background: #474bff;
+    position: absolute;
+    left: 50%;
+    transform-origin: left;
+    animation: spinner-16s03x 2s infinite, color-change 2s infinite;
+}
+
+.spinner div:nth-child(1) {
+    animation-delay: 0.15s, 0.15s;
+}
+
+.spinner div:nth-child(2) {
+    animation-delay: 0.3s, 0.3s;
+}
+
+.spinner div:nth-child(3) {
+    animation-delay: 0.45s, 0.45s;
+}
+
+.spinner div:nth-child(4) {
+    animation-delay: 0.6s, 0.6s;
+}
+
+.spinner div:nth-child(5) {
+    animation-delay: 0.75s, 0.75s;
+}
+
+@keyframes spinner-16s03x {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    50%,
+    80% {
+        transform: rotateY(-180deg);
+    }
+
+    90%,
+    100% {
+        opacity: 0;
+        transform: rotateY(-180deg);
+    }
+}
+
+@keyframes color-change {
+    0% {
+        background: #474bff;
+    }
+    10% {
+        background: #474bff;
+    }
+    15% {
+        background: #785aff; /* Intermediate color for smoother transition */
+    }
+    20% {
+        background: #ff4747;
+    }
+    25% {
+        background: #ff6565; /* Intermediate color for smoother transition */
+    }
+    30% {
+        background: #f82929;
+    }
+    35% {
+        background: #cc3a3a; /* Intermediate color for smoother transition */
+    }
+    40% {
+        background: #474bff;
+    }
+    50% {
+        background: #474bff;
+    }
+    60% {
+        background: #474bff;
+    }
+    70% {
+        background: #474bff;
+    }
+    80% {
+        background: #474bff;
+    }
+    90% {
+        background: #474bff;
+    }
+    100% {
+        background: #474bff;
+    }
+}
